@@ -18,6 +18,7 @@ function QuestionForm(props) {
   }
 
   function handleSubmit(event) {
+  //=================== will handle POST method =========================
     event.preventDefault();
     console.log(formData);
   }

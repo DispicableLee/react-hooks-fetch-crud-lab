@@ -1,10 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
+import QuestionItem from "./QuestionItem";
 
-function QuestionList() {
+
+function QuestionList({questionList}) {
+  console.log(questionList)
+  //===================== fetch then set state, then pass as props =============================
   return (
     <section>
       <h1>Quiz Questions</h1>
-      <ul>{/* display QuestionItem components here after fetching */}</ul>
+      <ul>
+        <QuestionItem questionList={questionList}/> 
+      </ul>
     </section>
   );
 }
