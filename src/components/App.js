@@ -15,12 +15,19 @@ const [questionList, setQuestionList] = useState([])
   console.log(questionList)
 
 
+//=========================== delete buttonPOC ==================================
+function handleDelete(e){
+  e.preventDefault()
+  console.log("deleting")
+}
+
+
 
 
   return (
     <main>
       <AdminNavBar setPage={setPage} />
-      {page === "Form" ? <QuestionForm /> : <QuestionList questionList={questionList}/>}
+      {page === "Form" ? <QuestionForm /> : <QuestionList handleDelete={handleDelete} questionList={questionList}/>}
     </main>
   );
 }

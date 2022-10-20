@@ -25,7 +25,7 @@ function QuestionItem({ questionList }) {
           Correct Answer:
           <select defaultValue={q.correctIndex}>{options(i)}</select>
         </label>
-        <button>Delete Question</button>
+        <button onClick={handleDelete}>Delete Question</button>
       </li>
     );
   });
